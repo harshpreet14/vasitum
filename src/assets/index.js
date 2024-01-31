@@ -14,6 +14,12 @@ import search from './search.svg';
 import settings from './settings.svg';
 import support from './support.svg';
 import tablogo from './tablogo.svg';
+import up from './up.svg';
+import graph from './graph.svg';
+import thindropdown from './thindropdown.svg';
+import pin from './pin.svg'
+import unpin from './unpin.svg';
+
 
 export {
     burgermenu,
@@ -31,5 +37,8 @@ export {
     search,
     settings,
     support,
-    tablogo
+    tablogo,
+    up,
+    graph,
+    thindropdown
 };
