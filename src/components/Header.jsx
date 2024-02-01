@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { burgermenu, notifications, messages, search, profile, dropdown} from '../assets'
-
+import Sidebar from './Sidebar';
 
 const SearchBar =()=>
 
@@ -16,6 +16,7 @@ const SearchBar =()=>
 
 const Header = () => {
     const [showSearchInput, setShowSearchInput] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     // Function to handle the search submit for the toggleable search bar on small screens
     const handleSearchSubmitMobile = (e) => {
@@ -23,6 +24,9 @@ const Header = () => {
         setShowSearchInput(false);
     };
 
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
 
     return (
         <>
@@ -41,7 +45,7 @@ const Header = () => {
 
             <nav className={`bg-white border-b flex w-full p-4 sticky top-0 z-10 flex-row justify-between items-center ${showSearchInput ? 'hidden' : 'flex'}`}>
                 <div className='flex flex-row gap-3 items-center'>
-                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" />
+                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" onClick={toggleSidebar} />
                     <img src={search} className="w-6 h-6 md:hidden " alt="Search" onClick={() => setShowSearchInput(true)} />
                     <div className="hidden md:block lg:block">
                         <SearchBar/>
@@ -55,6 +59,7 @@ const Header = () => {
                     <img src={dropdown} className='w-5 h-5' alt="Dropdown" />
                 </div>
             </nav>
+            
         </>
     );
 };
