@@ -1,4 +1,5 @@
 import React from 'react'
+import { burgermenu, notifications, messages, search, profile, dropdown} from '../assets'
 
 const SearchBar =()=>
 {
@@ -20,7 +21,27 @@ const SearchBar =()=>
     )
 }
 
-const Header = () => {
+
+const Header = () =>{
+    return(
+        <nav className='bg-white border-b flex w-full p-4 sticky flex-row justify-between items-center'>
+        <div className='flex flex-row gap-3 items-center'>
+            <img src={burgermenu}></img>
+            <img src={search}></img>
+        </div>
+        <div className='flex flex-row items-center gap-3'>
+            <img src={notifications} className='w-5 h-5'></img>
+            <img src={messages} className='w-5 h-5'></img>
+            <img src={profile} className='w-8 h-8 rounded-full'></img>
+            <img src={dropdown} className='w-5 h-5'></img>
+        </div>
+        </nav>
+    )
+}
+   
+
+export default Header;
+/*const Header = () => {
   return (
     <nav className='bg-white flex w-full items-center px-8 py-3 space-x-4 sticky top-0 z-10'>
         <aside className='flex items-center space-x-2.5 grow'>
@@ -49,5 +70,4 @@ const Header = () => {
     </nav>
   )
 }
-
-export default Header;
+*/

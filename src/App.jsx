@@ -12,9 +12,12 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-white font-['Poppins'] flex flex-col">
+      <Header/>
+      <div className='text-xl ml-4 mr-4 mt-4 font-semibold text-[#161E54]'>Dashboard</div>
       <JobCard/>
       <GraphCard/>
       <Announcement/>
+      <Recent/>
       <Upcoming/>
     </div>
   )
