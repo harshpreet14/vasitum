@@ -19,12 +19,12 @@ export default function Sidebar() {
         // lg:block will show sidebar on large screens and above
         // md:hidden hides the sidebar on medium screens
         // hidden hides the sidebar by default on small screens and below
-        <div className="hidden md:hidden lg:block h-screen border-r border-gray-200 w-64 px-6 p-5">
+        <div className="hidden md:hidden lg:block border-r border-gray-200 bg-[#FAFAFA] w-64 px-6 p-5">
             <div className="flex items-center">
                 <img src={tablogo} alt="Vasitum" className="w-12 h-12"/>
                 {/* lg:block will show the text on large screens and above */}
                 {/* hidden hides the text on medium screens and below */}
-                <span className="hidden lg:block text-3xl px-3 font-bold text-[#0A337A]">Vasitum</span>
+                <span className="hidden lg:block text-2xl px-3 font-bold text-[#0A337A]">Vasitum</span>
             </div>
 
             {/* The menus will be shown on large screens and above */}
