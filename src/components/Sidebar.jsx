@@ -15,20 +15,54 @@ export default function Sidebar() {
         { name: "Settings", icon: settings },
     ];
 
-    return (
+    return( 
+    <div className="hidden md:w-32 lg:w-64 border-r border-gray-200 bg-[#FAFAFA] px-6 p-5 md:block">
+            <div className="flex items-center">
+                <img src={tablogo} alt="Vasitum" className="w-12 h-12"/>
+                {/* Hide text on medium screens, show on large screens */}
+                <span className="hidden md:hidden lg:block text-2xl px-3 font-bold text-[#0A337A]">Vasitum</span>
+            </div>
+
+            {/* Adjust menu visibility for medium and large screens */}
+            <div className="mb-10">
+                <p className="hidden md:hidden lg:block text-start text-[#818181] text-xs mt-10 mb-5">MAIN MENU</p>
+                <ul>
+                    {mainMenu.map((val, index) => (
+                        <li key={index} className="mb-7 flex items-center">
+                            <img src={val.icon} alt={val.name} className="w-6 h-6"/>
+                            {/* Hide text labels on medium screens */}
+                            <span className="hidden md:hidden lg:block ml-2">{val.name}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="mb-10">
+                <p className="hidden md:hidden lg:block text-start text-[#818181] text-xs mt-10 mb-5">OTHER</p>
+                <ul>
+                    {otherMenu.map((val, index) => (
+                        <li key={index} className="mb-7 flex items-center">
+                            <img src={val.icon} alt={val.name} className="w-6 h-6"/>
+                            {/* Hide text labels on medium screens */}
+                            <span className="hidden md:hidden lg:block ml-2">{val.name}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>   
+        </div>
+    );
+}
+
+
+/*
+return (
         // lg:block will show sidebar on large screens and above
         // md:hidden hides the sidebar on medium screens
         // hidden hides the sidebar by default on small screens and below
         <div className="hidden md:hidden lg:block border-r border-gray-200 bg-[#FAFAFA] w-64 px-6 p-5">
             <div className="flex items-center">
                 <img src={tablogo} alt="Vasitum" className="w-12 h-12"/>
-                {/* lg:block will show the text on large screens and above */}
-                {/* hidden hides the text on medium screens and below */}
                 <span className="hidden lg:block text-2xl px-3 font-bold text-[#0A337A]">Vasitum</span>
             </div>
-
-            {/* The menus will be shown on large screens and above */}
-            {/* On medium screens, only icons will be shown */}
             <div className="mb-10">
                 <p className="hidden md:hidden lg:block text-start text-[#818181] text-xs mt-10 mb-5">MAIN MENU</p>
                 <ul>
@@ -36,7 +70,6 @@ export default function Sidebar() {
                         mainMenu.map((val, index) => {
                             return <li key={index} className="mb-7 flex items-center">
                                 <img src={val.icon} alt={val.name} className="w-6 h-6"/>
-                                {/* Hide text labels on medium screens and below */}
                                 <span className="hidden md:hidden lg:block ml-2">{val.name}</span>
                             </li>
                         })
@@ -58,9 +91,9 @@ export default function Sidebar() {
             </div>   
         </div>
     )
-}
-
-/*import {dashboard, recruitment, calendar, employee, department, support, settings, tablogo} from '../assets';
+    
+    
+import {dashboard, recruitment, calendar, employee, department, support, settings, tablogo} from '../assets';
 
 
 export default function Sidebar() {
