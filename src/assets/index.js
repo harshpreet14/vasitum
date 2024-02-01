@@ -19,8 +19,7 @@ import graph from './graph.svg';
 import thindropdown from './thindropdown.svg';
 import pin from './pin.svg'
 import unpin from './unpin.svg';
-
-
+import dots from './dots.svg'
 export {
     burgermenu,
     calendar, 
@@ -40,5 +39,8 @@ export {
     tablogo,
     up,
     graph,
-    thindropdown
+    thindropdown,
+    pin,
+    unpin,
+    dots
 };
