@@ -1,7 +1,7 @@
 import {up, graph} from '../assets';
 const GraphCard = () =>{
     return(
-        <div className="flex flex-col gap-4 m-4 ">
+        <div className="flex flex-col gap-4 m-4 md:grid md:grid-cols-2 ">
             <div className="border border-gray-300 rounded-lg flex flex-row justify-between p-2">
                 <div className="flex flex-col gap-1">
                     <div className="p-2 font-xl font-semibold">Total Employees</div>

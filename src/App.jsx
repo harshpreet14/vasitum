@@ -13,12 +13,21 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-white font-['Poppins'] flex flex-col">
       <Header/>
+      <div className='flex flex-col md:flex md:flex-col md:gap-3 md:flex-grow lg:flex-row lg:w-full lg:items-stretch'>
+      <Sidebar/>
+      <div></div>
+      <div className='flex-grow'>
       <div className='text-xl ml-4 mr-4 mt-4 font-semibold text-[#161E54]'>Dashboard</div>
       <JobCard/>
       <GraphCard/>
+      <div className=''></div>
       <Announcement/>
+      </div>
+      <div className=' flex flex-col md:flex-row md:flex lg:flex-col md:items-stretch md:justify-stretch lg:mt-11 flex-grow lg:items-stretch'>
       <Recent/>
       <Upcoming/>
+      </div>
+      </div>
     </div>
   )
 }

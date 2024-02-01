@@ -2,7 +2,7 @@ import React from 'react';
 
 const Recent = () => {
   return (
-    <div className=" m-4 text-white flex flex-col">
+    <div className="m-4 text-white flex flex-col md:min-w-60">
       <div className="text-md bg-[#1B204A] rounded-t-lg p-4 text-start  text-white">Recent Activity</div>
       <div className='p-5 rounded-b-lg bg-[#161E54] flex flex-col'>
         <div className=' flex flex-col'>

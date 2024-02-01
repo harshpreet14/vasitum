@@ -33,6 +33,7 @@ const Header = () =>{
             <img src={notifications} className='w-5 h-5'></img>
             <img src={messages} className='w-5 h-5'></img>
             <img src={profile} className='w-8 h-8 rounded-full'></img>
+            <span className='hidden lg:block text-[#161E54] text-md font-semibold'>Admirra John</span>
             <img src={dropdown} className='w-5 h-5'></img>
         </div>
         </nav>

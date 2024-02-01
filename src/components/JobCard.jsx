@@ -1,6 +1,6 @@
 const JobCard = () =>{
     return(
-        <div className="flex flex-col gap-4 m-4 md:gap-3 md:justify-between md:items-center">
+        <div className="flex flex-col gap-4 m-4 md:grid md:grid-cols-3">
         <div className="bg-[#FFEFE7] flex flex-col items-start p-2 rounded-lg">
             <div className="p-2 font-xl font-semibold">Available Position</div>
             <div className="p-2 font-semibold text-4xl">24</div>
