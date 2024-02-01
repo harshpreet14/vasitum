@@ -15,7 +15,7 @@ function App() {
       <Sidebar/>
       <div className='flex flex-col flex-grow'>
         <Header/>
-        <div className='flex flex-col md:flex md:flex-col md:gap-3 md:flex-grow lg:flex-row lg:w-full lg:items-stretch'>
+        <div className='flex flex-col md:flex md:flex-col md:gap-1 md:flex-grow lg:flex-row lg:w-full lg:items-stretch p-5'>
       
       {/* Cards and Announcement */}
       <div className='flex-grow'>
