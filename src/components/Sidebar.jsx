@@ -44,7 +44,7 @@ export default function Sidebar() {
                 </ul>
             </div>
             <div className="mb-10">
-                <p className="hidden md:hidden lg:block text-start text-[#818181] text-xs mt-10 mb-5">OTHER</p>
+                <p className="hidden md:hidden lg:block text-start text-[#818181] text-xs mt-10 mb-5 ">OTHER</p>
                 <ul>
                     {
                         otherMenu.map((val, index) => {

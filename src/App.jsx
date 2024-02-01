@@ -11,13 +11,13 @@ import Upcoming from './components/Upcoming';
 function App() {
 
   return (
-    <div className="w-full max-h-screen bg-white font-['Poppins'] flex flex-row">
+    <div className="w-full min-h-screen bg-white font-['Poppins'] flex flex-row">
       <Sidebar/>
       <div className='flex flex-col flex-grow'>
         <Header/>
         <div className='flex flex-col md:flex md:flex-col md:gap-3 md:flex-grow lg:flex-row lg:w-full lg:items-stretch'>
       
-      {/* left container */}
+      {/* Cards and Announcement */}
       <div className='flex-grow'>
       <div className='text-xl ml-4 mr-4 mt-4 font-semibold text-[#161E54]'>Dashboard</div>
       <JobCard/>
