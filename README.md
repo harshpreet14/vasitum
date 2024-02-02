@@ -1,3 +1,35 @@
+# Project Title
+
+A responsive dashboard for Vasitum to keep track of job postings, openings, upcoming events and announcements. The react applications is responsive and theme
+
+## Technologies Used
+
+- React
+- Tailwind CSS
+- HTML5
+- Vite
+
+## Getting Started
+
+To clone the repository and run the application locally, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/harshpreet14/vasitum.git
+
+2. Navigate to the project directory:
+   ```sh
+   cd vasitum
+   
+3. Install the dependencies:
+   ```sh
+   npm install
+
+
+4. Start the development server:
+   ```sh
+   npm run dev
+
 ```plaintext
 📦root
  ┣ 📂public
