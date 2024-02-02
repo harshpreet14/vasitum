@@ -1,4 +1,4 @@
-# Project Title
+# Vasitum Dasboard
 
 A responsive dashboard for Vasitum to keep track of job postings, openings, upcoming events and announcements. The react applications is responsive and theme
 
