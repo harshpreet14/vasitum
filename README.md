@@ -1,3 +1,25 @@
+```plaintext
+📦root
+ ┣ 📂public
+ ┃ ┗ 📂assets
+ ┃   ┗ ... (assets files)
+ ┣ 📂src
+ ┃ ┣ 📂components
+ ┃ ┃ ┗ ... (component files)
+ ┃ ┣ 📜App.css
+ ┃ ┣ 📜App.jsx
+ ┃ ┣ 📜index.css
+ ┃ ┗ 📜main.jsx
+ ┣ 📜.eslintrc.js
+ ┣ 📜.gitignore
+ ┣ 📜index.html
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┣ 📜postcss.config.js
+ ┣ 📜README.md
+ ┣ 📜tailwind.config.js
+ ┗ 📜vite.config.js
+```
 ## Desktop Mode
 ![Desk Dark](public/desk-dark.png)
 ![Desk Light](public/desk-light.png)
