@@ -7,7 +7,7 @@ const SearchBar =()=>
 {
     return (
         <div className='px-4 py-[9px] bg-[#FAFAFA] space-x-2 flex grow items-center rounded-sm dark:bg-[#2f2b3a] '>
-            <input className='grow outline-none bg-transparent leading text-md :text-[#B3B3B3]' placeholder='Search'/>
+            <input className='grow outline-none bg-transparent leading text-md text-white dark:text-[#B3B3B3] dark:bg-[#2f2b3a]' placeholder='Search'/>
             <img src ={search}/>
         </div>
     )
@@ -58,11 +58,11 @@ const Header = () => {
     return (
         <>
             {showSearchInput && (
-                <form onSubmit={handleSearchSubmitMobile} className="fixed inset-x-0 top-0 p-2 z-20 flex items-center px-4 py-[9px] bg-[#FAFAFA] rounded-sm">
+                <form onSubmit={handleSearchSubmitMobile} className="fixed inset-x-0 top-0 p-2 z-20 flex items-center px-4 py-[9px] bg-[#FAFAFA] rounded-sm dark:bg-[#2f2b3a] ">
                     <input
                         name="search"
                         type="search"
-                        className="w-full p-2 grow outline-gray-100 bg-transparent text-md text-[#525252] placeholder-gray-600"
+                        className="w-full p-2 grow outline-gray-100 bg-transparent text-md dark:bg-[#2f2b3a]  text-[#525252] dark:text-[#B3B3B3] placeholder-gray-600 "
                         placeholder="Search"
                         autoFocus
                         onBlur={() => setShowSearchInput(false)}
