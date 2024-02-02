@@ -1,8 +1,18 @@
-# React + Vite
+## Desktop Mode
+![Desk Dark](public/desk-dark.png)
+![Desk Light](public/desk-light.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Mobile Mode
+![Mobile Dark](public/mobile-dark.png)
+![Mobile Light](public/mobile-light.png)
+![Mobile Sidebar Dark](public/mob-sidebar-dark.png)
+![Mobile Sidebar Light](public/mob-sidebar-light.png)
+![Search Dark](public/search-dark.png)
+![Search Light](public/search-light.png)
 
-Currently, two official plugins are available:
+## Tab Mode
+![Tab Dark](public/tab-dark.png)
+![Tab Light](public/tab-light.png)
+![Tab Side Dark](public/tab-side-dark.png)
+![Tab Side Light](public/tab-side-light.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
