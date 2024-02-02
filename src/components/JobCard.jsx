@@ -20,4 +20,4 @@ const JobCard = () =>{
     )
 }
 
-export default JobCard
+export default JobCard;

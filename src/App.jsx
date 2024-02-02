@@ -25,7 +25,7 @@ function App() {
       <Announcement/>
       </div>
 
-      <div className='flex flex-col md:flex-row md:flex lg:flex-col md:items-stretch md:justify-stretch lg:mt-11 flex-grow lg:items-stretch lg:w-2/6'>
+      <div className='flex flex-col md:flex-row md:flex lg:flex-col md:items-stretch md:justify-stretch lg:mt-11 flex-grow lg:items-stretch lg:w-2/6 md:flex-shrink flex-gap-auto'>
       <Recent/>
       <Upcoming/>
       </div>

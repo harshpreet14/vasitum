@@ -2,7 +2,7 @@ import { thindropdown, pin, unpin, dots } from "../assets";
 
 const Upcoming = () =>{
     return(
-        <div className="flex flex-col md:min-h-80 md:max-h-96">
+        <div className="flex flex-col md:min-h-80 md:max-h-96 lg:max-h-48">
             <div className=" flex flex-col border border-gray-300 dark:border-[#2f2b3a] rounded-t-lg p-4 pb-0 m-4 mb-0">
             <div className="flex flex-row justify-between align-center mb-4">
             <p className="font-semibold text-md text-[#161E54] dark:text-[#a688fa]">Upcoming Schedule</p>
@@ -12,7 +12,7 @@ const Upcoming = () =>{
             </div>
             </div>
             <span className=" text-[#686868] text-sm mb-2">Priority</span>
-            <div className=" overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-transparent max-h-64 md:max-h-64 lg:max-h-80">
+            <div className=" overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-transparent max-h-64 md:max-h-64 lg:max-h-80 lg:max-m-10">
             <Item title="Review candidate applications" time="5 Minutes ago"/>
             <span className=" text-[#686868] text-sm mb-2 mt-5">Other</span>
             <Item title="Interview with candidates" time="Today -10.30 AM"/>

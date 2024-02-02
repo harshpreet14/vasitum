@@ -18,6 +18,10 @@ const Header = () => {
     const [showSearchInput, setShowSearchInput] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [theme, setTheme] = useState("light");
+    const [toggle, setToggle] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+   
 
     useEffect(() =>{
       if(theme === "dark"){
@@ -41,6 +45,8 @@ const Header = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
+    const handleClick = () => setToggle(!toggle);
+
     return (
         <>
             {showSearchInput && (
@@ -55,10 +61,11 @@ const Header = () => {
                     />
                 </form>
             )}
+            
 
-            <nav className={`bg-white border-b dark:border-[#1a1625] flex w-full p-4 sticky top-0 z-10 flex-row justify-between items-center dark:bg-[#1a1625] ${showSearchInput ? 'hidden' : 'flex'}`}>
+            <nav className={`bg-white border-b dark:border-[#1a1625] flex w-full p-4 sticky top-0 z-10 flex-row justify-between items-center dark:bg-[#1a1625] ${showSearchInput ? 'hidden' : 'flex'}`} > 
                 <div className='flex flex-row gap-3 items-center'>
-                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" onClick={toggleSidebar} />
+                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" onClick={handleClick} />
                     <img src={search} className="w-6 h-6 md:hidden " alt="Search" onClick={() => setShowSearchInput(true)} />
                     <div className="hidden md:block lg:block">
                         <SearchBar/>
@@ -72,7 +79,9 @@ const Header = () => {
                     <span className='hidden lg:block text-[#161E54] text-md font-semibold dark:text-[#a688fa]'>Admirra John</span>
                     <img src={dropdown} className='w-5 h-5' alt="Dropdown" />
                 </div>
+
             </nav>
+            
             
         </>
     );
