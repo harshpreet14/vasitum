@@ -20,6 +20,9 @@ import thindropdown from './thindropdown.svg';
 import pin from './pin.svg'
 import unpin from './unpin.svg';
 import dots from './dots.svg'
+import vector from './vector.svg';
+import sun from './sun.svg'
+
 export {
     burgermenu,
     calendar, 
@@ -42,5 +45,7 @@ export {
     thindropdown,
     pin,
     unpin,
-    dots
+    dots,
+    vector,
+    sun
 };
