@@ -22,6 +22,7 @@ import unpin from './unpin.svg';
 import dots from './dots.svg'
 import vector from './vector.svg';
 import sun from './sun.svg'
+import left from './left.svg'
 
 export {
     burgermenu,
@@ -47,5 +48,6 @@ export {
     unpin,
     dots,
     vector,
-    sun
+    sun,
+    left
 };

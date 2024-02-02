@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { burgermenu, notifications, messages, search, profile, dropdown, sun} from '../assets'
+import { burgermenu, notifications, messages, search, profile, dropdown, sun, left, dashboard, recruitment, calendar, employee, department, support, settings, tablogo} from '../assets'
 import Sidebar from './Sidebar';
 
 const SearchBar =()=>
@@ -16,12 +16,21 @@ const SearchBar =()=>
 
 const Header = () => {
     const [showSearchInput, setShowSearchInput] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [theme, setTheme] = useState("light");
-    const [toggle, setToggle] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
 
-   
+    const mainMenu = [
+        { name: "Dashboard", icon: dashboard },
+        { name: "Recruitment", icon: recruitment },
+        { name: "Schedule", icon: calendar }, 
+        { name: "Employee", icon: employee },
+        { name: "Department", icon: department }
+    ];
+    
+    const otherMenu = [
+        { name: "Support", icon: support},
+        { name: "Settings", icon: settings },
+    ];
 
     useEffect(() =>{
       if(theme === "dark"){
@@ -41,11 +50,10 @@ const Header = () => {
         setShowSearchInput(false);
     };
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
 
-    const handleClick = () => setToggle(!toggle);
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
 
     return (
         <>
@@ -62,10 +70,10 @@ const Header = () => {
                 </form>
             )}
             
-
+            
             <nav className={`bg-white border-b dark:border-[#1a1625] flex w-full p-4 sticky top-0 z-10 flex-row justify-between items-center dark:bg-[#1a1625] ${showSearchInput ? 'hidden' : 'flex'}`} > 
                 <div className='flex flex-row gap-3 items-center'>
-                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" onClick={handleClick} />
+                    <img src={burgermenu} className='w-6 h-6 lg:hidden ' alt="Menu" onClick={toggleNav} />
                     <img src={search} className="w-6 h-6 md:hidden " alt="Search" onClick={() => setShowSearchInput(true)} />
                     <div className="hidden md:block lg:block">
                         <SearchBar/>
@@ -82,7 +90,37 @@ const Header = () => {
 
             </nav>
             
-            
+            <div className={`MOBILE-MENU fixed inset-0 bg-black bg-opacity-50 z-40 dark:border-[#1a1625] transform  ${isNavOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out lg:hidden`}>
+                <div className="relative min-h-screen w-64 flex-col bg-white dark:bg-[#1a1625] p-5 items-center">
+                    <img src={left} className='w-8 h-8 hover:bg-gray-200 hover:rounded-full p-1 mb-5' alt="ChevronLeft" onClick={() => setIsNavOpen(false)} />
+                    <div className="flex items-center">
+                    <img src={tablogo} alt="Vasitum" className="w-12 h-12 cursor-default"/>
+                    <span className=" text-2xl px-3 font-bold text-[#0A337A] dark:text-white">Vasitum</span>
+                </div>
+            <div className="mb-10 flex-col items-center">
+                <p className="text-start text-[#818181] text-xs mt-10 mb-5 whitespace-nowrap overflow-hidden cursor-default">MAIN MENU</p>
+                <ul>
+                    {mainMenu.map((val, index) => (
+                        <li key={index} className="mb-7 flex items-center cursor-pointer">
+                            <img src={val.icon} alt={val.name} className="w-6 h-6"/>
+                            <span className={`ml-3 hover:text-[#FF5151] dark:text-white dark:hover:text-[#FF5151] ${val.name === "Dashboard" ? "text-[#FF5151]" : ""}`}>{val.name}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="mb-10">
+                <p className="text-start text-[#818181] text-xs mt-10 mb-5 whitespace-nowrap overflow-hidden cursor-default">OTHER</p>
+                <ul>
+                    {otherMenu.map((val, index) => (
+                        <li key={index} className="mb-7 flex items-center cursor-pointer">
+                            <img src={val.icon} alt={val.name} className="w-6 h-6"/>
+                            <span className="ml-2 hover:text-[#FF5151] dark:text-white dark:hover:text-[#FF5151]">{val.name}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>   
+            </div>
+            </div>
         </>
     );
 };
