@@ -8,6 +8,7 @@ A responsive dashboard for Vasitum to keep track of job postings, openings, upco
 - Tailwind CSS
 - HTML5
 - Vite
+- NodeJS
 
 ## 📌 Getting Started
 
